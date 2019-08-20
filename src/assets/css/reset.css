@@ -1,0 +1,41 @@
+body{font-family:"microsoft yahei","sans-serif"; /* 1 */}
+input{font-family: "microsoft yahei";}
+input,button,select,textarea{outline:none}
+header,nav,footer{display: block;}
+/** æ¸…é™¤å†…å¤–è¾¹è· **/
+body, h1, h2, h3, h4, h5, h6, hr, p,
+blockquote, /* structural elements ç»“æž„å…ƒç´  */
+dl, dt, dd, ul, ol, li, /* list elements åˆ—è¡¨å…ƒç´  */
+pre, /* text formatting elements æ–‡æœ¬æ ¼å¼å…ƒç´  */
+form, fieldset, legend, button,  /* form elements è¡¨å•å…ƒç´ 
+th, td, /* table elements è¡¨æ ¼å…ƒç´  */
+img/* img elements å›¾ç‰‡å…ƒç´  */{
+    border:medium none;
+    margin: 0;
+    padding: 0;
+}
+h1, h2, h3, h4, h5, h6 { font-size: 100%; }
+/** é‡ç½®åˆ—è¡¨å…ƒç´  **/
+ul, ol { list-style: none; }
+/** é‡ç½®è¶…é“¾æŽ¥å…ƒç´  **/
+a { text-decoration: none; color:#333;}
+/*a:hover {color:#F40; }*/
+/** é‡ç½®å›¾ç‰‡å…ƒç´  **/
+img{ border:0;}
+/** é‡ç½®è¡¨æ ¼å…ƒç´  **/
+table { border-collapse: collapse; border-spacing: 0; }
+/** æ¸…é™¤å†…å¤–è¾¹è· **/
+body, h1, h2, h3, h4, h5, h6, hr, p,
+blockquote, /* structural elements ç»“æž„å…ƒç´  */
+dl, dt, dd, ul, ol, li, /* list elements åˆ—è¡¨å…ƒç´  */
+pre, /* text formatting elements æ–‡æœ¬æ ¼å¼å…ƒç´  */
+form, fieldset, legend, button, /* form elements è¡¨å•å…ƒç´ 
+th, td, /* table elements è¡¨æ ¼å…ƒç´  */
+img/* img elements å›¾ç‰‡å…ƒç´  */{
+    border:medium none;
+    margin: 0;
+    padding: 0;
+}
+a:hover{
+    color:#fff;
+}
