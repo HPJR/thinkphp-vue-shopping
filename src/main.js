@@ -144,3 +144,4 @@ new Vue({
     render: h => h(App)
 });
 
+export default store;

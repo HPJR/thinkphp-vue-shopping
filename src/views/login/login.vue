@@ -48,6 +48,7 @@
     import { required, maxLength,minLength, sameAs ,email ,numeric} from 'vuelidate/lib/validators'
     import {loginIn} from '../../service/index';
     import Cookies from 'js-cookie'
+    import {Encrypt,Decrypt} from '../../secret'
 
     export default {
         data(){
@@ -97,8 +98,8 @@
                     if(result.code === '04'){
                         //是否记住密码
                         if(_this.check === true){
-                            Cookies.set('email', _this.email, { expires: 3 });
-                            Cookies.set('password', _this.password, { expires: 3 });
+                            Cookies.set('email', _this.email,{ expires: 3 });
+                            Cookies.set('password',Encrypt(_this.password) ,{ expires: 3 });
                         }
                         else{
                             Cookies.remove('email');
@@ -106,6 +107,7 @@
                         }
                         //设置token
                         this.$store.commit('SET_TOKEN',result.token);
+
                         //如果用户名存在读取用户名，否则用户名为邮箱号
                         if(result.member.name){
                             this.$store.commit('GET_USER', result.member.name);
@@ -127,7 +129,7 @@
             getUser(){
                 if( Cookies.get('email') && Cookies.get('password')){
                     this.email = Cookies.get('email');
-                    this.password = Cookies.get('password');
+                    this.password = Decrypt(Cookies.get('password'));
                     this.check = true;
                 }
             }

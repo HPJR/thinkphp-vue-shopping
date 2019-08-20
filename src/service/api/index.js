@@ -24,35 +24,34 @@ export default {
     },
 
     //登录
-    getLogin (email,password,reqData){
+    getLogin (email,password){
         return Ax.post('/User/dologin',qs.stringify({
-                email:email,
-                password:password
-            }),{params: reqData}
-        )
+            email:email,
+            password:password
+        }))
     },
 
     //注册
-    getReg (email,password,code,reqData){
+    getReg (email,password,code){
         return Ax.post('/User/doreg',qs.stringify({
                 email:email,
                 password:password,
                 code:code
-            }),{params: reqData}
+            })
         )
     },
 
     //异步校验邮箱号是否注册
-    getEmail(email,reqData){
+    getEmail(email){
         return Ax.post('/User/emailCheck',qs.stringify({
                 email:email,
-            }),{params: reqData}
+            })
         )
     },
 
     //退出
     lgOut (reqData) {
-        return Ax.post('/user/logOut',{params: reqData});
+        return Ax.get('/user/logOut',{params: reqData});
     },
 
     //新品上架栏目内容 /new
@@ -71,13 +70,13 @@ export default {
     },
 
     //加入收藏
-    getFav(id,reqData){
-      return Ax.post('/fav/addFav/',qs.stringify({id:id}),{params: reqData});
+    getFav(id){
+      return Ax.post('/fav/addFav/',qs.stringify({id:id}));
     },
 
     //取消收藏
-    getCancel(id,reqData){
-        return Ax.post('/fav/delFav/',qs.stringify({id:id}),{params: reqData});
+    getCancel(id){
+        return Ax.post('/fav/delFav/',qs.stringify({id:id}));
     },
 
     //展示收藏夹
@@ -86,8 +85,8 @@ export default {
     },
 
     // 加入购物车
-    getCart(id,reqData){
-        return Ax.post('/cart/addCart',qs.stringify({id:id}),{params: reqData});
+    getCart(id){
+        return Ax.post('/cart/addCart',qs.stringify({id:id}));
     },
 
     //购物车获取
@@ -96,26 +95,26 @@ export default {
     },
 
     //购物车单个数据数量操作
-    getCartNow(id,num,reqData){
+    getCartNow(id,num){
         return Ax.post('/Cart/changeCart',qs.stringify({
             id:id,
             num:num
-        }),{params: reqData});
+        }));
     },
 
     //购物车删除
-    delCartList(id,num,reqData){
+    delCartList(id,num){
         return Ax.post('/Cart/delCart',qs.stringify({
             id:id,
             num:num
-        }),{params: reqData});
+        }));
     },
 
     //购物车提交订单
-    getCartOrder(idStr,reqData){
+    getCartOrder(idStr){
         return Ax.post('/Orders/addOrder',qs.stringify({
             string: idStr
-        }),{params: reqData});
+        }));
     },
 
     //产品详情页获取
@@ -139,13 +138,13 @@ export default {
     },
 
     //设置用户信息
-    setUser(name,relname,qq,mobile,reqData){
+    setUser(name,relname,qq,mobile){
         return Ax.post('/User/docinfo',qs.stringify({
             name:name,
             relname:relname,
             qq:qq,
             mobile:mobile
-        }),{params: reqData});
+        }));
     },
 
     //获取当前提交订单的信息
@@ -164,25 +163,25 @@ export default {
     },
 
     //新增地址
-    getNowAdd(name,address,tel,zip,isdefault,reqData){
+    getNowAdd(name,address,tel,zip,isdefault){
         return Ax.post('/User/addaddress',qs.stringify({
             name:name,
             address:address,
             tel:tel,
             zip:zip,
             default:isdefault,
-        }),{params: reqData});
+        }));
     },
 
     //删除地址
-    delAdd(id,reqData){
+    delAdd(id){
         return Ax.post('/User/delAddress',qs.stringify({
             id:id
-        }),{params: reqData});
+        }));
     },
 
     //修改地址
-    ReAdd(id,name,address,tel,zip,isdefault,reqData){
+    ReAdd(id,name,address,tel,zip,isdefault){
         return Ax.post('/User/docaddress',qs.stringify({
             id:id,
             name:name,
@@ -190,29 +189,29 @@ export default {
             tel:tel,
             zip:zip,
             default:isdefault,
-        }),{params: reqData});
+        }));
     },
 
     //提交订单
-    subOrder(id,con,reqData){
+    subOrder(id,con){
         return Ax.post('/Orders/confirm',qs.stringify({
             addid:id,
             remark:con
-        }),{params: reqData});
+        }));
     },
 
     //确认收货
-    confirmOd(id,reqData){
+    confirmOd(id){
         return Ax.post('/Orders/confirmOrder',qs.stringify({
             id:id
-        }),{params: reqData});
+        }));
     },
 
     //删除订单
-    delOd(id,reqData){
+    delOd(id){
         return Ax.post('/Orders/delOrder',qs.stringify({
             id:id
-        }),{params: reqData});
+        }));
     },
 
     //支付
@@ -223,9 +222,9 @@ export default {
     },
 
     //密码修改
-    regPass(password,reqData){
+    regPass(password){
         return Ax.post('/User/docpwd',qs.stringify({
             password:password
-        }),{params: reqData});
+        }));
     }
 };

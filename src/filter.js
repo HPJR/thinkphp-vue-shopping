@@ -1,6 +1,6 @@
 //图片路径
 const filterImg = (value)=>{
-    return process.env.NODE_ENV === 'development' ? 'http://www.ff.tt/Uploads/'+ value : 'http://test2.jianfly.com/Uploads/'+ value;
+    return process.env.NODE_ENV === 'development' ? 'http://test2.jianfly.com/Uploads/'+ value : 'http://test2.jianfly.com/Uploads/'+ value;
 };
 
 
