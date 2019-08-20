@@ -17,7 +17,7 @@ npm run build
  
 
 ## 效果演示
-http://test1.jianfly.com
+<a href="http://test1.jianfly.com" target="_blank">http://test1.jianfly.com</a>
 
 ## 基本功能
 登录、注册  
