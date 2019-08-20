@@ -134,7 +134,7 @@
             conImg(value){
                 if(value){
                     if(process.env.NODE_ENV === 'development'){
-                        value = value.replace(/\/Uploads\//g, "http://www.ff.tt/Uploads/");
+                        value = value.replace(/\/Uploads\//g, "http://test2.jianfly.com/Uploads/");
                     }
                     else {
                         value = value.replace(/\/Uploads\//g, "http://test2.jianfly.com/Uploads/");

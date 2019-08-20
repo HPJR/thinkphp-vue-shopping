@@ -1,6 +1,5 @@
 //接口方法，里面调用 api 方法，供页面级调用
 import Api from './api';
-import Ax from "./axios";
 
 //首页
 export async function getDate(reqData) {
