@@ -1,6 +1,6 @@
 # thinkphp-vue-shopping
 ## 说明
-这是一个自己以前的一个老项目，后台tp3，前台使用jq+layui搭建的一个商城。学习vue之后自己基于这个商城重新使用vue进行改写，后台还是使用的原先的tp3，所有返回请求除了改了下ajaxreturn，其他基本没变。前台使用了vue全家桶及ivew框架进行了更改。
+这是一个自己以前的一个老项目，后台tp3，前台使用jq+layui搭建的一个商城。学习vue之后自己基于这个商城重新使用vue进行改写，后台还是使用的原先的tp3，所有返回请求除了改了下ajaxreturn，其他基本没变。前台使用了vue全家桶及ivew框架
 
 ## 技术栈
 vue2 + vuex + vue-router + vue-cli + axios + ES6/7 + ivew + less
