@@ -7,11 +7,13 @@ vue2 + vuex + vue-router + vue-cli + axios + ES6/7 + ivew + less
 
 ## 项目运行
 
+```
 开启本地服务器localhost:8088  
 npm run serve  
 
 发布环境  
-npm run build  
+npm run build 
+```
  
 
 ## 效果演示
